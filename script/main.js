@@ -341,4 +341,16 @@ replyBtn.addEventListener("click", () => {
   bgMusic.currentTime = 0; // Reset the music
   bgMusic.play();
 });
+const toggleMusicBtn = document.getElementById("toggle-music");
+
+toggleMusicBtn.addEventListener("click", () => {
+  if (bgMusic.paused) {
+    bgMusic.play();
+    toggleMusicBtn.innerText = "🔊";
+  } else {
+    bgMusic.pause();
+    toggleMusicBtn.innerText = "🔇";
+  }
+});
+
 fetchData();
